@@ -61,7 +61,7 @@ class ForecastCard {
 
             //  Render weather conditions symbol
             const symbolEl = div.querySelector('#forecast-symbol');
-            getWeatherSymbol(symbolEl, day.symbolId, 'day', '4xl');
+            getWeatherSymbol(symbolEl, day.symbolId, 'day', 'text-5xl');
 
             this._forecastContainer.appendChild(div);
         }

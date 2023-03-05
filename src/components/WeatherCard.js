@@ -71,7 +71,7 @@ class WeatherCard {
         // Get weather conditions symbol
         const symbolEl = document.querySelector('#weather-symbol');
         const symbolId = data.weather[0].id;
-        getWeatherSymbol(symbolEl, symbolId, dayOrNight, '6xl');
+        getWeatherSymbol(symbolEl, symbolId, dayOrNight, 'text-8xl');
     }
 
     _getDatetimeUTC(data) {

@@ -21,7 +21,7 @@ new ForecastCard();
 // Get weather conditions symbol
 function getWeatherSymbol(symbolEl, symbolId, dayOrNight, symbolSize) {
     symbolEl.className = '';
-    symbolEl.classList.add('fa-solid', `text-${symbolSize}`);
+    symbolEl.classList.add('fa-solid', `${symbolSize}`);
     switch (true) {
         case symbolId < 300:
             symbolEl.classList.add('fa-cloud-bolt', 'text-white');
