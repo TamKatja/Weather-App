@@ -39,6 +39,7 @@ import WeatherCard from './components/WeatherCard.js';
 import ForecastCard from './components/ForecastCard.js';
 
 const API_URL = 'https://api.openweathermap.org';
+const API_KEY = process.env.API_KEY;
 
 // Default coordinates on inital page load
 const DEFAULT_LAT = -31.953512;
@@ -86,4 +87,11 @@ function getWeatherSymbol(symbolEl, symbolId, dayOrNight, symbolSize) {
     return;
 }
 
-export { API_URL, DEFAULT_LAT, DEFAULT_LON, DEFAULT_UNITS, getWeatherSymbol };
+export {
+    API_URL,
+    API_KEY,
+    DEFAULT_LAT,
+    DEFAULT_LON,
+    DEFAULT_UNITS,
+    getWeatherSymbol,
+};

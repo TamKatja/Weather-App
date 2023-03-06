@@ -1,4 +1,4 @@
-import { API_URL } from '../index.js';
+import { API_URL, API_KEY } from '../index.js';
 
 // Get current user coordinates
 function locateCurrentUser() {
@@ -19,7 +19,7 @@ function locateCurrentUser() {
 async function fetchCityCoords(city) {
     try {
         const response = await fetch(
-            `${API_URL}/geo/1.0/direct?q=${city}&limit=1&appid=${process.env.API_KEY}`
+            `${API_URL}/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`
         );
         const data = await response.json();
         if (data.length === 0) {
