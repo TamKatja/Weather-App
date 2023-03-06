@@ -1,4 +1,9 @@
-import { DEFAULT_LAT, DEFAULT_LON, getWeatherSymbol } from '../index.js';
+import {
+    DEFAULT_LAT,
+    DEFAULT_LON,
+    DEFAULT_UNITS,
+    getWeatherSymbol,
+} from '../index.js';
 import fetchWeatherData from '../api/weatherData.js';
 
 class ForecastCard {
