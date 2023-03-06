@@ -75,7 +75,7 @@ class WeatherCard {
     }
 
     _getDatetimeUTC(data) {
-        return new Date(data.dt * 1000).toUTCString();
+        return new Date(data.dt * 1000).getTime();
     }
 
     _getDatetimeLocal(data) {
@@ -83,17 +83,17 @@ class WeatherCard {
     }
 
     _getSunriseUTC(data) {
-        return new Date(data.sys.sunrise * 1000).toUTCString();
+        return new Date(data.sys.sunrise * 1000).getTime();
     }
 
     _getSunsetUTC(data) {
-        return new Date(data.sys.sunset * 1000).toUTCString();
+        return new Date(data.sys.sunset * 1000).getTime();
     }
 
     _setDayOrNight(datetime, sunrise, sunset) {
         // Toggle page background color
         const body = document.querySelector('body');
-        if (datetime >= sunrise && datetime <= sunset) {
+        if (datetime >= sunrise && datetime < sunset) {
             body.classList.add('from-sky-200', 'to-sky-400');
             body.classList.remove('from-indigo-200', 'to-indigo-400');
             return 'day';

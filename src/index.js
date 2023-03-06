@@ -1,5 +1,38 @@
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import {
+    faMagnifyingGlass,
+    faLocationCrosshairs,
+    faTemperatureEmpty,
+    faLocationDot,
+    faCloudBolt,
+    faCloudRain,
+    faCloudShowersHeavy,
+    faSnowflake,
+    faSmog,
+    faTornado,
+    faSun,
+    faMoon,
+    faCloud,
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+    faMagnifyingGlass,
+    faLocationCrosshairs,
+    faTemperatureEmpty,
+    faLocationDot,
+    faCloudBolt,
+    faCloudRain,
+    faCloudShowersHeavy,
+    faSnowflake,
+    faSmog,
+    faTornado,
+    faSun,
+    faMoon,
+    faCloud
+);
+
+dom.watch();
+
 import './css/style.css';
 import SearchForm from './components/SearchForm.js';
 import WeatherCard from './components/WeatherCard.js';
